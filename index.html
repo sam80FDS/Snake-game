@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Snake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ELITE SNAKE</h1>
+    <p class="subtitle">Next-gen retro gaming experience</p>
+
+    <div class="scoreboard">
+      <div><h2 id="score">0</h2><p>Score</p></div>
+      <div><h2 id="best">0</h2><p>Best Score</p></div>
+    </div>
+
+    <div id="gameOverText" class="game-over" style="display: none;">Game Over!</div>
+    <div class="game-canvas-wrapper">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+    </div>
+
+    <div class="controls">
+      <button onclick="resumeGame()">RESUME</button>
+      <button onclick="pauseGame()">PAUSE</button>
+      <button onclick="resetGame()">RESET</button>
+    </div>
+
+    <div class="mobile-controls">
+      <div></div>
+      <button onclick="changeDirection('UP')">⬆️</button>
+      <div></div>
+      <button onclick="changeDirection('LEFT')">⬅️</button>
+      <div></div>
+      <button onclick="changeDirection('RIGHT')">➡️</button>
+      <div></div>
+      <button onclick="changeDirection('DOWN')">⬇️</button>
+      <div></div>
+    </div>
+
+    <div class="how-to">
+      <h3>How to Play</h3>
+      <p>Use arrow keys or WASD to control your snake. Collect glowing orbs to grow and increase your score. Avoid walls and don't bite yourself!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
